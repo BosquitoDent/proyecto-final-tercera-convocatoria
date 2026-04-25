@@ -39,15 +39,14 @@ app.post(ROUTES.AUTH_LOGIN, (req, res) => {
 app.use(ROUTES.CANCIONES, cancionesRouter)
 
 // Servir frontend en producción
+const fs = require("fs")
 const frontendPath = path.join(__dirname, "..", "frontend", "dist")
-app.use(express.static(frontendPath))
-app.get("*", (_req, res, next) => {
-  const fs = require("fs")
-  if (fs.existsSync(path.join(frontendPath, "index.html"))) {
-    return res.sendFile(path.join(frontendPath, "index.html"))
-  }
-  next()
-})
+const indexPath = path.join(frontendPath, "index.html")
+
+if (fs.existsSync(indexPath)) {
+  app.use(express.static(frontendPath))
+  app.get("*", (_req, res) => res.sendFile(indexPath))
+}
 
 app.use((_req, res) => res.status(404).json({ error: MESSAGES.NOT_FOUND }))
 app.use(errorHandler)
