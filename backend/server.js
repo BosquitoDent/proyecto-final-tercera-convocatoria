@@ -54,10 +54,15 @@ app.use(errorHandler)
 const PORT = process.env.PORT || 3000
 
 async function start() {
-  await connectDb()
-  app.listen(PORT, () => {
-    console.log(`Servidor escuchando en http://localhost:${PORT}`)
-  })
+  try {
+    await connectDb()
+    app.listen(PORT, () => {
+      console.log(`Servidor escuchando en http://localhost:${PORT}`)
+    })
+  } catch (err) {
+    console.error("Error al arrancar:", err.message)
+    process.exit(1)
+  }
 }
 
 // Cierre limpio
