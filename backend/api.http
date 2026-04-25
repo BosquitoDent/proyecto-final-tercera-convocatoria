@@ -1,0 +1,63 @@
+### Health check del servidor
+GET http://localhost:3000/health
+
+### Health check de la base de datos
+GET http://localhost:3000/db/health
+
+### Login
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+  "user": "admin@music.com",
+  "pass": "1234"
+}
+
+### Listar todas las canciones
+GET http://localhost:3000/canciones
+
+### Listar canciones filtradas por título
+GET http://localhost:3000/canciones?titulo=Bohemian
+
+### Listar canciones filtradas por artista
+GET http://localhost:3000/canciones?artista=Queen
+
+### Listar canciones filtradas por mood
+GET http://localhost:3000/canciones?mood=Chill
+
+### Listar canciones filtradas por fecha
+GET http://localhost:3000/canciones?desde=2025-01-01&hasta=2026-12-31
+
+### Obtener una canción por ID
+GET http://localhost:3000/canciones/6907564f596eafdf6820a74b
+
+### Crear una canción
+POST http://localhost:3000/canciones
+Content-Type: application/json
+
+{
+  "titulo": "Blinding Lights",
+  "artista": "The Weeknd",
+  "estadoDeAnimo": "Energético"
+}
+
+### Actualizar canción completa (PUT)
+PUT http://localhost:3000/canciones/6907564f596eafdf6820a74b
+Content-Type: application/json
+
+{
+  "titulo": "Título actualizado",
+  "artista": "Artista actualizado",
+  "estadoDeAnimo": "Relajado"
+}
+
+### Actualizar campos parciales (PATCH)
+PATCH http://localhost:3000/canciones/6907564f596eafdf6820a74b
+Content-Type: application/json
+
+{
+  "estadoDeAnimo": "Melancólico"
+}
+
+### Eliminar una canción
+DELETE http://localhost:3000/canciones/6907564f596eafdf6820a74b
