@@ -45,7 +45,7 @@ const indexPath = path.join(frontendPath, "index.html")
 
 if (fs.existsSync(indexPath)) {
   app.use(express.static(frontendPath))
-  app.get("*", (_req, res) => res.sendFile(indexPath))
+  app.get("/{*splat}", (_req, res) => res.sendFile(indexPath))
 }
 
 app.use((_req, res) => res.status(404).json({ error: MESSAGES.NOT_FOUND }))
