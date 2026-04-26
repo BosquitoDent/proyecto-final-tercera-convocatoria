@@ -26,12 +26,16 @@ app.get(ROUTES.DB_HEALTH, async (_req, res) => {
   }
 })
 
-// Login
+// Login: comprueba credenciales contra la lista de usuarios del .env
+const usuarios = (process.env.LOGIN_USERS || "").split(",").map(u => {
+  const [email, pass] = u.split(":")
+  return { email, pass }
+})
+
 app.post(ROUTES.AUTH_LOGIN, (req, res) => {
   const { user, pass } = req.body
-  if (user === process.env.LOGIN_USER && pass === process.env.LOGIN_PASS) {
-    return res.status(200).json({ ok: true, session: "ok" })
-  }
+  const valido = usuarios.some(u => u.email === user && u.pass === pass)
+  if (valido) return res.status(200).json({ ok: true, session: "ok" })
   return res.status(401).json({ ok: false, error: MESSAGES.AUTH_INVALID })
 })
 

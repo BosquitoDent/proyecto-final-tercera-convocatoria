@@ -1,0 +1,347 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns="http://www.w3.org/TR/REC-html40">
+<head>
+<meta charset="utf-8">
+<title>MoodSound - Documentación del Proyecto</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Calibri, Arial, sans-serif;
+    font-size: 12pt;
+    color: #1a1a1a;
+    line-height: 1.6;
+    margin: 60px 70px;
+  }
+  h1 {
+    font-size: 26pt;
+    color: #1a3a6b;
+    text-align: center;
+    margin-bottom: 4px;
+    letter-spacing: 1px;
+  }
+  .portada-emoji {
+    text-align: center;
+    font-size: 48pt;
+    margin: 30px 0 10px;
+  }
+  .portada-subtitulo {
+    text-align: center;
+    font-size: 13pt;
+    color: #555;
+    margin-bottom: 40px;
+  }
+  .portada-datos {
+    text-align: center;
+    font-size: 11pt;
+    color: #666;
+    margin-bottom: 60px;
+    line-height: 2;
+  }
+  h2 {
+    font-size: 16pt;
+    color: #1a3a6b;
+    border-bottom: 2px solid #d0d8e8;
+    padding-bottom: 6px;
+    margin-top: 36px;
+    margin-bottom: 14px;
+  }
+  h3 {
+    font-size: 13pt;
+    color: #2a5090;
+    margin-top: 20px;
+    margin-bottom: 8px;
+  }
+  p, li {
+    font-size: 11pt;
+    color: #333;
+    text-align: justify;
+  }
+  ul, ol {
+    margin-left: 20px;
+  }
+  li {
+    margin-bottom: 4px;
+  }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 14px 0;
+    font-size: 10.5pt;
+  }
+  th {
+    background-color: #1a3a6b;
+    color: white;
+    padding: 8px 12px;
+    text-align: left;
+    font-weight: 600;
+  }
+  td {
+    border: 1px solid #d0d8e8;
+    padding: 7px 12px;
+    color: #333;
+  }
+  tr:nth-child(even) td {
+    background-color: #f4f7fb;
+  }
+  .code {
+    font-family: Consolas, 'Courier New', monospace;
+    background-color: #f0f3f8;
+    border: 1px solid #d0d8e8;
+    border-radius: 4px;
+    padding: 10px 14px;
+    font-size: 10pt;
+    color: #1a1a1a;
+    display: block;
+    margin: 10px 0;
+    white-space: pre;
+  }
+  .inline-code {
+    font-family: Consolas, 'Courier New', monospace;
+    background-color: #eef1f6;
+    padding: 1px 5px;
+    border-radius: 3px;
+    font-size: 10pt;
+  }
+  .info-box {
+    background-color: #e8f0fe;
+    border-left: 4px solid #1a3a6b;
+    padding: 12px 16px;
+    margin: 16px 0;
+    font-size: 11pt;
+  }
+  .separator {
+    border: none;
+    border-top: 1px solid #d0d8e8;
+    margin: 30px 0;
+  }
+  a {
+    color: #1a3a6b;
+    text-decoration: underline;
+  }
+</style>
+<!--[if gte mso 9]>
+<xml>
+  <w:WordDocument>
+    <w:View>Print</w:View>
+    <w:Zoom>100</w:Zoom>
+    <w:DoNotOptimizeForBrowser/>
+  </w:WordDocument>
+</xml>
+<![endif]-->
+</head>
+<body>
+
+<!-- PORTADA -->
+<div class="portada-emoji">🎵</div>
+<h1>MoodSound</h1>
+<div class="portada-subtitulo">Tu biblioteca musical organizada por emociones</div>
+<div class="portada-subtitulo" style="font-size:12pt; color:#1a3a6b; font-weight:600;">Documentación del Proyecto Final</div>
+
+<div class="portada-datos">
+  Proyecto Final de Máster<br>
+  Desarrollo Web Full Stack<br><br>
+  <b>Repositorio:</b> <a href="https://github.com/BosquitoDent/proyecto-final-tercera-convocatoria">github.com/BosquitoDent/proyecto-final-tercera-convocatoria</a><br>
+  <b>Web desplegada:</b> <a href="https://proyecto-final-tercera-convocatoria.onrender.com/login">proyecto-final-tercera-convocatoria.onrender.com</a><br><br>
+  <b>Credenciales de acceso:</b><br>
+  Usuario: <span class="inline-code">admin@music.com</span><br>
+  Contraseña: <span class="inline-code">1234</span>
+</div>
+
+<hr class="separator">
+
+<!-- 1. INTRODUCCIÓN -->
+<h2>1. Introducción</h2>
+<p>MoodSound es una aplicación web fullstack que permite gestionar una colección de canciones asociadas a estados de ánimo. La idea nace de una premisa simple: la música que escuchamos está conectada con cómo nos sentimos.</p>
+<p>La aplicación permite crear, editar, eliminar y filtrar canciones por título, artista o mood, ofreciendo una experiencia completa de gestión musical con una interfaz moderna y responsive.</p>
+
+<!-- 2. OBJETIVOS -->
+<h2>2. Objetivos del proyecto</h2>
+<ul>
+  <li>Desarrollar una aplicación fullstack funcional con tecnologías actuales</li>
+  <li>Implementar una API REST completa con operaciones CRUD</li>
+  <li>Crear una interfaz de usuario moderna, responsive y accesible</li>
+  <li>Aplicar buenas prácticas de desarrollo: separación de responsabilidades, código limpio y reutilizable</li>
+  <li>Desplegar la aplicación en un entorno de producción real</li>
+</ul>
+
+<!-- 3. TECNOLOGÍAS -->
+<h2>3. Tecnologías utilizadas</h2>
+
+<h3>Frontend</h3>
+<table>
+  <tr><th>Tecnología</th><th>Versión</th><th>Uso</th></tr>
+  <tr><td>React</td><td>19</td><td>Librería de UI con componentes</td></tr>
+  <tr><td>Vite</td><td>7</td><td>Bundler y servidor de desarrollo</td></tr>
+  <tr><td>React Router</td><td>7</td><td>Navegación SPA con rutas protegidas</td></tr>
+  <tr><td>CSS puro</td><td>—</td><td>Estilos con variables, media queries y animaciones</td></tr>
+</table>
+
+<h3>Backend</h3>
+<table>
+  <tr><th>Tecnología</th><th>Versión</th><th>Uso</th></tr>
+  <tr><td>Node.js</td><td>—</td><td>Entorno de ejecución del servidor</td></tr>
+  <tr><td>Express</td><td>5</td><td>Framework para la API REST</td></tr>
+  <tr><td>Mongoose</td><td>9</td><td>ODM para modelar datos en MongoDB</td></tr>
+</table>
+
+<h3>Base de datos e infraestructura</h3>
+<table>
+  <tr><th>Tecnología</th><th>Uso</th></tr>
+  <tr><td>MongoDB Atlas</td><td>Base de datos en la nube</td></tr>
+  <tr><td>Render</td><td>Despliegue del servidor y frontend</td></tr>
+  <tr><td>GitHub</td><td>Control de versiones y repositorio</td></tr>
+</table>
+
+<!-- 4. METODOLOGÍA -->
+<h2>4. Metodología de desarrollo</h2>
+<p>El desarrollo del proyecto ha seguido un enfoque iterativo e incremental, organizando el trabajo en fases claras:</p>
+
+<h3>Fase 1 — Planificación y diseño</h3>
+<ul>
+  <li>Definición de requisitos funcionales: CRUD de canciones, filtros, autenticación</li>
+  <li>Diseño de la estructura de la base de datos (schema de Mongoose)</li>
+  <li>Definición de los endpoints de la API REST</li>
+  <li>Elección de la paleta de colores y diseño visual (tema oscuro)</li>
+</ul>
+
+<h3>Fase 2 — Desarrollo del backend</h3>
+<ul>
+  <li>Configuración del servidor Express con middleware (CORS, JSON parser)</li>
+  <li>Conexión a MongoDB Atlas con Mongoose</li>
+  <li>Implementación del modelo de datos con validaciones</li>
+  <li>Desarrollo de los controllers con operaciones CRUD</li>
+  <li>Middleware centralizado de errores</li>
+  <li>Endpoint de autenticación básica</li>
+</ul>
+
+<h3>Fase 3 — Desarrollo del frontend</h3>
+<ul>
+  <li>Estructura del proyecto con Vite y React</li>
+  <li>Implementación del sistema de rutas con React Router (rutas protegidas)</li>
+  <li>Contexto de autenticación con Context API</li>
+  <li>Custom hooks para encapsular la lógica de negocio (useAuth, useCanciones)</li>
+  <li>Componentes de presentación reutilizables</li>
+  <li>Diseño responsive con media queries (desktop, tablet, móvil)</li>
+  <li>Lazy loading de páginas para optimizar el rendimiento</li>
+</ul>
+
+<h3>Fase 4 — Integración y despliegue</h3>
+<ul>
+  <li>Conexión frontend-backend mediante servicio de API centralizado</li>
+  <li>Configuración para servir el frontend compilado desde Express en producción</li>
+  <li>Despliegue en Render con variables de entorno</li>
+  <li>Pruebas de funcionamiento en producción</li>
+</ul>
+
+<!-- 5. ARQUITECTURA -->
+<h2>5. Arquitectura del proyecto</h2>
+
+<h3>Estructura de carpetas</h3>
+<div class="code">Proyecto-FullStack/
+├── backend/
+│   ├── src/
+│   │   ├── config/         Configuración (BD, rutas, mensajes)
+│   │   ├── controllers/    Lógica de negocio
+│   │   ├── middleware/     Manejo centralizado de errores
+│   │   ├── models/         Schemas de Mongoose
+│   │   └── routes/         Definición de rutas
+│   ├── .env                Variables de entorno
+│   └── server.js           Punto de entrada del servidor
+├── frontend/
+│   ├── src/
+│   │   ├── components/     Componentes de presentación
+│   │   │   ├── canciones/  Formulario, filtros, tabla
+│   │   │   ├── layout/     Navbar
+│   │   │   └── ui/         Popup de notificaciones
+│   │   ├── config/         Constantes y textos
+│   │   ├── context/        Contexto de autenticación
+│   │   ├── hooks/          Custom hooks (useAuth, useCanciones)
+│   │   ├── pages/          Páginas con lógica
+│   │   └── services/       Llamadas a la API
+│   └── .env                Variables de entorno
+└── README.md</div>
+
+<h3>Patrón de arquitectura</h3>
+<p>El backend sigue el patrón <b>MVC</b> (Model-View-Controller), separando claramente los modelos de datos, la lógica de negocio en controllers y las rutas como punto de entrada.</p>
+<p>El frontend aplica una <b>separación por responsabilidades</b>: las páginas contienen la lógica de estado, los componentes se encargan de la presentación, los hooks encapsulan la lógica reutilizable y los servicios centralizan las llamadas a la API.</p>
+
+<!-- 6. API REST -->
+<h2>6. API REST</h2>
+<table>
+  <tr><th>Método</th><th>Ruta</th><th>Descripción</th></tr>
+  <tr><td>GET</td><td>/health</td><td>Health check del servidor</td></tr>
+  <tr><td>GET</td><td>/db/health</td><td>Health check de MongoDB</td></tr>
+  <tr><td>POST</td><td>/auth/login</td><td>Iniciar sesión</td></tr>
+  <tr><td>GET</td><td>/canciones</td><td>Listar canciones (con filtros opcionales)</td></tr>
+  <tr><td>GET</td><td>/canciones/:id</td><td>Obtener una canción por ID</td></tr>
+  <tr><td>POST</td><td>/canciones</td><td>Crear una canción nueva</td></tr>
+  <tr><td>PUT</td><td>/canciones/:id</td><td>Actualizar canción completa</td></tr>
+  <tr><td>PATCH</td><td>/canciones/:id</td><td>Actualizar campos parciales</td></tr>
+  <tr><td>DELETE</td><td>/canciones/:id</td><td>Eliminar una canción</td></tr>
+</table>
+
+<p><b>Filtros disponibles</b> en GET /canciones: <span class="inline-code">titulo</span>, <span class="inline-code">artista</span>, <span class="inline-code">mood</span>, <span class="inline-code">desde</span>, <span class="inline-code">hasta</span>. Las búsquedas de texto son parciales y no distinguen mayúsculas.</p>
+
+<!-- 7. MODELO DE DATOS -->
+<h2>7. Modelo de datos</h2>
+<table>
+  <tr><th>Campo</th><th>Tipo</th><th>Obligatorio</th><th>Descripción</th></tr>
+  <tr><td>titulo</td><td>String</td><td>Sí</td><td>Nombre de la canción</td></tr>
+  <tr><td>artista</td><td>String</td><td>Sí</td><td>Nombre del artista</td></tr>
+  <tr><td>estadoDeAnimo</td><td>String</td><td>No</td><td>Mood asociado a la canción</td></tr>
+  <tr><td>fecha</td><td>Date</td><td>No</td><td>Fecha de creación (por defecto: actual)</td></tr>
+  <tr><td>createdAt</td><td>Date</td><td>Auto</td><td>Timestamp de creación (Mongoose)</td></tr>
+  <tr><td>updatedAt</td><td>Date</td><td>Auto</td><td>Timestamp de última modificación</td></tr>
+</table>
+
+<!-- 8. FUNCIONALIDADES -->
+<h2>8. Funcionalidades principales</h2>
+<ul>
+  <li><b>Autenticación:</b> sistema de login con credenciales, sesión persistente en localStorage y rutas protegidas</li>
+  <li><b>CRUD completo:</b> crear, leer, actualizar (total y parcial) y eliminar canciones</li>
+  <li><b>Filtros de búsqueda:</b> por título, artista y estado de ánimo, con búsqueda parcial</li>
+  <li><b>Edición inline:</b> editar canciones directamente en la tabla sin cambiar de página</li>
+  <li><b>Dashboard:</b> página de inicio con estadísticas (total de canciones, última añadida, moods más usados)</li>
+  <li><b>Notificaciones:</b> toasts temporales que confirman las acciones del usuario</li>
+  <li><b>Diseño responsive:</b> adaptado a desktop, tablet y móvil con media queries</li>
+  <li><b>Lazy loading:</b> carga diferida de páginas para optimizar el rendimiento</li>
+  <li><b>Accesibilidad:</b> soporte para prefers-reduced-motion</li>
+</ul>
+
+<!-- 9. DISEÑO -->
+<h2>9. Diseño y experiencia de usuario</h2>
+<p>La interfaz utiliza un tema oscuro con una paleta basada en azules y grises, diseñada para ser cómoda visualmente y coherente en todas las páginas.</p>
+<ul>
+  <li><b>Variables CSS:</b> colores, bordes y fondos centralizados en :root para mantener consistencia</li>
+  <li><b>Animaciones sutiles:</b> transiciones en botones, hover en tarjetas, toast de notificaciones y notas musicales flotantes en el login</li>
+  <li><b>Semántica HTML:</b> uso de etiquetas como main, nav, header, section, article y footer</li>
+  <li><b>Tipografía:</b> Inter (Google Fonts) con pesos 400 y 600</li>
+</ul>
+
+<!-- 10. DESPLIEGUE -->
+<h2>10. Despliegue</h2>
+<p>La aplicación está desplegada en <b>Render</b> como un único servicio web. El backend sirve tanto la API como el frontend compilado, simplificando la infraestructura.</p>
+
+<div class="info-box">
+  <b>URL de producción:</b> <a href="https://proyecto-final-tercera-convocatoria.onrender.com/login">https://proyecto-final-tercera-convocatoria.onrender.com</a><br>
+  <b>Repositorio GitHub:</b> <a href="https://github.com/BosquitoDent/proyecto-final-tercera-convocatoria">https://github.com/BosquitoDent/proyecto-final-tercera-convocatoria</a><br><br>
+  <b>Credenciales de acceso:</b><br>
+  Usuario: <span class="inline-code">admin@music.com</span><br>
+  Contraseña: <span class="inline-code">1234</span>
+</div>
+
+<!-- 11. POSIBLES MEJORAS -->
+<h2>11. Posibles mejoras futuras</h2>
+<ul>
+  <li>Implementar autenticación con JWT para proteger los endpoints de la API</li>
+  <li>Añadir rate limiting para prevenir abuso de la API</li>
+  <li>Configurar CORS restringido al dominio de producción</li>
+  <li>Añadir headers de seguridad con Helmet</li>
+  <li>Implementar logging estructurado para producción</li>
+  <li>Añadir tests unitarios y de integración</li>
+</ul>
+
+<!-- 12. CONCLUSIÓN -->
+<h2>12. Conclusión</h2>
+<p>MoodSound demuestra la capacidad de desarrollar una aplicación web completa desde cero, abarcando desde el diseño de la base de datos hasta el despliegue en producción. El proyecto aplica tecnologías actuales del ecosistema JavaScript, buenas prácticas de arquitectura y un diseño cuidado que prioriza la experiencia del usuario.</p>
+
+</body>
+</html>
