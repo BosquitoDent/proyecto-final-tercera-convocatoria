@@ -1,9 +1,11 @@
+/* Página Acerca de */
 .about {
   max-width: 640px;
   margin: 0 auto;
   padding: 10px 0;
 }
 
+/* Título con gradiente */
 .about-title {
   font-size: 28px;
   font-weight: 700;
@@ -20,6 +22,7 @@
   margin: 0 0 28px;
 }
 
+/* Secciones con tarjeta */
 .about-section {
   background: linear-gradient(180deg, var(--panel), var(--panel-2));
   border: 1px solid var(--border);
@@ -35,6 +38,7 @@
   margin: 0 0 12px;
 }
 
+/* Pasos numerados */
 .about-steps {
   margin: 0;
   padding-left: 20px;
@@ -47,6 +51,7 @@
   color: var(--brand);
 }
 
+/* Grid de tecnologías */
 .tech-grid {
   display: flex;
   gap: 12px;
@@ -69,6 +74,7 @@
   font-size: 18px;
 }
 
+/* Responsive: móvil */
 @media (max-width: 640px) {
   .about-title { font-size: 22px }
   .tech-grid { flex-direction: column }

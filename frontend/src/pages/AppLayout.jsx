@@ -9,9 +9,9 @@ export default function AppLayout() {
   return (
     <>
       <Navbar onSalir={cerrarSesion} />
-      <div className="container">
+      <main className="container">
         <Outlet />
-      </div>
+      </main>
     </>
   )
 }

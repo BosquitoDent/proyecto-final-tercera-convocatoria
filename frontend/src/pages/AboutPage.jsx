@@ -5,20 +5,20 @@ const T = TEXTS.ABOUT
 
 export default function AboutPage() {
   return (
-    <div className="about">
+    <article className="about">
       <h1 className="about-title">{T.TITLE}</h1>
       <p className="about-intro">{T.INTRO}</p>
 
-      <div className="about-section">
+      <section className="about-section">
         <h2>{T.HOW_TITLE}</h2>
         <ol className="about-steps">
           {T.HOW_STEPS.map((step, i) => (
             <li key={i}>{step}</li>
           ))}
         </ol>
-      </div>
+      </section>
 
-      <div className="about-section">
+      <section className="about-section">
         <h2>{T.TECH_TITLE}</h2>
         <div className="tech-grid">
           <div className="tech-item">
@@ -34,7 +34,7 @@ export default function AboutPage() {
             <span>{T.TECH_DB}</span>
           </div>
         </div>
-      </div>
-    </div>
+      </section>
+    </article>
   )
 }

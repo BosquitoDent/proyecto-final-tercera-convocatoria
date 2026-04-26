@@ -40,16 +40,16 @@ export default function HomePage() {
 
   return (
     <div className="home">
-      <div className="home-hero">
+      <header className="home-hero">
         <div className="home-icon">🎵</div>
         <h1 className="home-title">{T.WELCOME}</h1>
         <p className="home-subtitle">{T.SUBTITLE}</p>
         <button className="btn btn-primary home-cta" onClick={() => nav(ROUTES.CANCIONES)}>
           {T.CTA}
         </button>
-      </div>
+      </header>
 
-      <div className="home-stats">
+      <section className="home-stats">
         <div className="stat-card">
           <div className="stat-number">{stats.total}</div>
           <div className="stat-label">{stats.total === 1 ? "canción guardada" : "canciones guardadas"}</div>
@@ -78,9 +78,9 @@ export default function HomePage() {
             </div>
           </div>
         )}
-      </div>
+      </section>
 
-      <div className="home-features">
+      <section className="home-features">
         <div className="feature-card">
           <div className="feature-icon">🎶</div>
           <h3>{T.FEATURE_1_TITLE}</h3>
@@ -96,7 +96,7 @@ export default function HomePage() {
           <h3>{T.FEATURE_3_TITLE}</h3>
           <p>{T.FEATURE_3_DESC}</p>
         </div>
-      </div>
+      </section>
     </div>
   )
 }

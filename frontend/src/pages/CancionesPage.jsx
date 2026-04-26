@@ -80,7 +80,7 @@ export default function CancionesPage() {
         onTitulo={setTitulo} onArtista={setArtista} onMood={setMood} onSubmit={handleCrear}
       />
 
-      <div className="card">
+      <section className="card">
         <div className="section-title">{T.SEARCH_TITLE}</div>
         <FiltrosCanciones
           fTitulo={fTitulo} fArtista={fArtista} fMood={fMood}
@@ -100,7 +100,7 @@ export default function CancionesPage() {
           onEditar={empezarEditar} onGuardar={guardarEdicion} onCancelar={cancelarEdicion}
           onBorrar={(id) => borrar(id, filtrosActuales)}
         />
-      </div>
+      </section>
     </>
   )
 }

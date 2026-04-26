@@ -14,7 +14,7 @@ export default function LoginPage() {
   }
 
   return (
-    <div className="auth">
+    <main className="auth">
       <div className="auth-bg">
         {["🎵","🎶","🎧","🎤","🎵","🎶"].map((e, i) => (
           <span key={i} className={`note note-${i}`}>{e}</span>
@@ -32,10 +32,10 @@ export default function LoginPage() {
           </button>
         </form>
         {error && <div className="auth-error">{error}</div>}
-        <div className="auth-foot">
+        <footer className="auth-foot">
           <span className="muted">{TEXTS.LOGIN.DEMO_LABEL}</span> admin@music.com · 1234
-        </div>
+        </footer>
       </div>
-    </div>
+    </main>
   )
 }
