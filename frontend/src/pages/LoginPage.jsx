@@ -15,7 +15,13 @@ export default function LoginPage() {
 
   return (
     <div className="auth">
+      <div className="auth-bg">
+        {["🎵","🎶","🎧","🎤","🎵","🎶"].map((e, i) => (
+          <span key={i} className={`note note-${i}`}>{e}</span>
+        ))}
+      </div>
       <div className="auth-card card">
+        <div className="auth-icon">🎵</div>
         <div className="brand">{TEXTS.APP_NAME}</div>
         <div className="subtitle">{TEXTS.LOGIN.SUBTITLE}</div>
         <form onSubmit={submit} className="auth-form">
